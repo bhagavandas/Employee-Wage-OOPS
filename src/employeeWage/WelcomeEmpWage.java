@@ -10,5 +10,6 @@ public class WelcomeEmpWage extends UC1{
 		PartTimeWage();
 		Switch();
 		MonthlyWages();
+		//UC6();
 	}
 }
