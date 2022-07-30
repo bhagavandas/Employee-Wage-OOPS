@@ -8,7 +8,7 @@ public class WelcomeEmpWage extends UC1{
 		AttendanceCheck();
 		DailyEmpWage();
 		PartTimeWage();
-		
+		Switch();
 		
 	}
 }
