@@ -1,6 +1,7 @@
 package employeeWage;
 
 import java.util.Random;
+import java.util.Scanner;
 
 public class UC1{
 	static int WAGE_PER_HOUR=20;
@@ -8,7 +9,8 @@ public class UC1{
 	static int PART_TIME_HOURS=4;
 	static int IS_PARTTIME=1;
 	static int IS_FULLTIME=2;
-	
+	static int WORKING_DAYS_PER_MONTH=20;
+	static int employee;
 	static int Daily_emp_wage;
 	static int emp_wage;
 	static int attendance=0;
@@ -47,17 +49,27 @@ public class UC1{
 		
 		switch(empAttendance) {
 		case 1:
-			System.out.println("Part time Employee wage = " + Daily_emp_wage);
+			System.out.println("Fulltime Employee wage per Day = " + Daily_emp_wage);
 			break;
 		case 2:
-			System.out.println("Full time Employee wage = " + emp_wage);
+			System.out.println("Parttime Employee wage per Day = " + emp_wage);
 			break;
 		default:
 			System.out.println("Employee wage = " + 0);
 		}
-
-		
-       
+	}
+		public static void MonthlyWages() {
+			WelcomeEmpWage obj = new WelcomeEmpWage();
+			int Fulltime_Monthly_wages=WORKING_DAYS_PER_MONTH*FULL_DAY_HOUR*WAGE_PER_HOUR;
+			int Parttime_Monthly_wages= Fulltime_Monthly_wages/2;
+			Scanner scan = new Scanner(System.in);
+			System.out.println("Enter number 1 for Paart time or 2 for Fulltime: ");
+			int employee = scan.nextInt();
+			if(employee==IS_FULLTIME) {
+		System.out.println("Full time employee Monthly wages: " + Fulltime_Monthly_wages);
+			}else if(employee==IS_PARTTIME) {
+				System.out.println("Part time Employee Monthly wages: " + Parttime_Monthly_wages);
+			}
 	}	
 }	
 

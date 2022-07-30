@@ -9,6 +9,6 @@ public class WelcomeEmpWage extends UC1{
 		DailyEmpWage();
 		PartTimeWage();
 		Switch();
-		
+		MonthlyWages();
 	}
 }
